@@ -1,0 +1,161 @@
+/*!**************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/sidebar/sidebar.css ***!
+  \**************************************************************************************/
+.slide-bar {
+    width: 20%;
+    background-color: #f0f0f0;
+    padding: 1rem;
+    min-height: 100vh;
+    padding-top: 30px;
+}
+
+
+.slide-bar ul {
+    padding-top: 30px
+}
+
+.slide-bar ul li {
+    color: gray;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: white;
+    margin-top: 15px;
+    border-radius: 9px;
+    cursor: pointer;
+
+}
+
+.slide-bar ul li a {
+    color: gray;
+    text-transform: capitalize;
+    width: 60%;
+}
+
+.slide-bar ul .icon-container {
+    color: gray;
+    text-transform: capitalize;
+    background-color: blueviolet;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+
+}
+
+.slide-bar ul li i {
+    color: white;
+
+}
+
+
+@media(max-width:767px) {
+    .slide-bar {
+        width: 40%;
+
+    }
+
+}
+/*!*********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/navbar/nav.css ***!
+  \*********************************************************************************/
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #8a2be2;
+
+}
+
+.navbar .title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navbar .search {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    display: flex;
+}
+
+.navbar .search input {
+    border: none;
+    outline: none;
+    padding: 3px;
+
+}
+
+
+.navbar .search input:focus {
+    outline: 2px solid #8a2be2;
+}
+
+.icon-container {
+    color: white;
+    text-transform: capitalize;
+    background-color: blueviolet;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+
+
+}
+/*!***************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/pages/home/home.css ***!
+  \***************************************************************************/
+.home {
+    width: 80%;
+    padding: 10px 40px;
+}
+
+@media(max-width:767px) {
+    .home {
+        width: 60%;
+        padding: 10px 40px;
+    }
+}
+/*!***************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/app.css ***!
+  \***************************************************************/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: cairo;
+
+}
+
+
+ul {
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* app container */
+.app-container {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+
+
+}
+
+
+
+/* app container */

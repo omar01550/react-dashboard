@@ -1,0 +1,11 @@
+.home {
+    width: 80%;
+    padding: 10px 40px;
+}
+
+@media(max-width:767px) {
+    .home {
+        width: 60%;
+        padding: 10px 40px;
+    }
+}

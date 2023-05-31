@@ -1,0 +1,59 @@
+.slide-bar {
+    width: 20%;
+    background-color: #f0f0f0;
+    padding: 1rem;
+    min-height: 100vh;
+    padding-top: 30px;
+}
+
+
+.slide-bar ul {
+    padding-top: 30px
+}
+
+.slide-bar ul li {
+    color: gray;
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    background-color: white;
+    margin-top: 15px;
+    border-radius: 9px;
+    cursor: pointer;
+
+}
+
+.slide-bar ul li a {
+    color: gray;
+    text-transform: capitalize;
+    width: 60%;
+}
+
+.slide-bar ul .icon-container {
+    color: gray;
+    text-transform: capitalize;
+    background-color: blueviolet;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+
+}
+
+.slide-bar ul li i {
+    color: white;
+
+}
+
+
+@media(max-width:767px) {
+    .slide-bar {
+        width: 40%;
+
+    }
+
+}
