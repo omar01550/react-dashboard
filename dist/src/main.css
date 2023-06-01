@@ -3,11 +3,12 @@
   \**************************************************************************************/
 .slide-bar {
     width: 20%;
-    background-color: #f0f0f0;
     padding: 1rem;
     min-height: 100vh;
     padding-top: 30px;
+    background-color: white;
 }
+
 
 
 .slide-bar ul {
@@ -15,16 +16,26 @@
 }
 
 .slide-bar ul li {
-    color: gray;
+    background-color: rgba(0, 0, 255, 0.12);
     font-size: 1.1rem;
     padding: 0.5rem;
     display: flex;
     align-items: center;
     font-weight: bold;
-    background-color: white;
+    color: white;
     margin-top: 15px;
     border-radius: 9px;
     cursor: pointer;
+
+}
+
+.slide-bar ul li:hover {
+    background-color: blueviolet;
+
+}
+
+.slide-bar ul li:hover a {
+    color: white;
 
 }
 
@@ -69,7 +80,8 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #8a2be2;
-
+    padding: 10px;
+    background-color: white;
 }
 
 .navbar .title {
@@ -110,19 +122,86 @@ header {
 
 
 }
+/*!******************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/components/cardCount/cardCount.css ***!
+  \******************************************************************************************/
+.card-count {
+    width: 150px;
+    height: 150px;
+    background-color: rgba(0, 0, 255, 0.12);
+    margin-top: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding: 10px 0;
+    cursor: pointer;
+
+}
+
+.card-count:hover {
+    background-color: blueviolet;
+    color: white;
+}
+
+
+.card-count .icon-container {
+    width: 50px;
+    height: 50px;
+
+}
 /*!***************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/pages/home/home.css ***!
   \***************************************************************************/
 .home {
-    width: 80%;
+    width: 100%;
     padding: 10px 40px;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: #f0f0f0;
 }
 
+
+.home .cards {
+    margin-top: 30px;
+    padding: 20px;
+    padding-bottom: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+
+/* charts */
+.carts {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: white;
+    margin-top: 30px
+}
+
+
+.home .chart {
+    margin-top: 50px;
+
+}
+
+.recharts-layer {
+    cursor: pointer;
+}
+
+/* charts */
+
 @media(max-width:767px) {
-    .home {
-        width: 60%;
-        padding: 10px 40px;
-    }
+    .home {}
 }
 /*!***************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./src/app.css ***!

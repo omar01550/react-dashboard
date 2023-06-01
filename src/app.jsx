@@ -14,11 +14,56 @@ import './app.css'
 const app = () => {
 
 
+    const initCourses = [
+
+        { course: 'Math', students: 130 },
+        { course: 'Science', students: 245 },
+        { course: 'English', students: 240 },
+        { course: 'History', students: 145 },
+        { course: 'Art', students: 104 },
+
+    ];
+
+
+    const initTeachers = [{
+        name: "adel",
+        age: 35,
+        id: 20,
+        courses: ["arabic", "english"]
+
+    },
+    {
+        name: "ahmed",
+        age: 35,
+        id: 20,
+        courses: ["arabic", "english"]
+
+    },
+    {
+        name: "ali",
+        age: 35,
+        id: 20,
+        courses: ["arabic", "english"]
+
+    },
+
+    ];
+    const initStudents = [];
+
+    const [students, setStudents] = useState([]);
+    const [teachers, setTeachers] = useState(initTeachers);
+    const [courses, setCourses] = useState(initCourses);
+    const [rooms, setRooms] = useState([]);
+    const [sideBarVisibilty, setSideBarVisibility] = useState(true);
+
+
+
+
     return (
         <div className="App">
             <div className="app-container">
-                <Sidebar />
-                <Home />
+                <Sidebar sideBarVisibilty={sideBarVisibilty} />
+                <Home teachers={teachers} courses={courses} />
             </div>
 
         </div >

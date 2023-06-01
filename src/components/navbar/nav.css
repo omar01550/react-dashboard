@@ -4,7 +4,8 @@ header {
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid #8a2be2;
-
+    padding: 10px;
+    background-color: white;
 }
 
 .navbar .title {

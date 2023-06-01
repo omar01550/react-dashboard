@@ -1,11 +1,47 @@
 .home {
-    width: 80%;
+    width: 100%;
     padding: 10px 40px;
+    height: 100vh;
+    overflow-y: scroll;
+    background-color: #f0f0f0;
 }
 
+
+.home .cards {
+    margin-top: 30px;
+    padding: 20px;
+    padding-bottom: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+
+/* charts */
+.carts {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: white;
+    margin-top: 30px
+}
+
+
+.home .chart {
+    margin-top: 50px;
+
+}
+
+.recharts-layer {
+    cursor: pointer;
+}
+
+/* charts */
+
 @media(max-width:767px) {
-    .home {
-        width: 60%;
-        padding: 10px 40px;
-    }
+    .home {}
 }

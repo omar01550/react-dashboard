@@ -1,10 +1,11 @@
 .slide-bar {
     width: 20%;
-    background-color: #f0f0f0;
     padding: 1rem;
     min-height: 100vh;
     padding-top: 30px;
+    background-color: white;
 }
+
 
 
 .slide-bar ul {
@@ -12,16 +13,26 @@
 }
 
 .slide-bar ul li {
-    color: gray;
+    background-color: rgba(0, 0, 255, 0.12);
     font-size: 1.1rem;
     padding: 0.5rem;
     display: flex;
     align-items: center;
     font-weight: bold;
-    background-color: white;
+    color: white;
     margin-top: 15px;
     border-radius: 9px;
     cursor: pointer;
+
+}
+
+.slide-bar ul li:hover {
+    background-color: blueviolet;
+
+}
+
+.slide-bar ul li:hover a {
+    color: white;
 
 }
 
