@@ -1,0 +1,46 @@
+.teacher-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.teacher-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.teacher-info {
+    display: flex;
+    align-items: center;
+}
+
+.teacher-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+}
+
+.teacher-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.teacher-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-icon {
+    font-size: 30px;
+    color: blueviolet;
+}

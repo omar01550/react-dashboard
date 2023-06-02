@@ -63,7 +63,8 @@
 
 @media(max-width:767px) {
     .slide-bar {
-        width: 40%;
+        display: none;
+        width: 0px;
 
     }
 

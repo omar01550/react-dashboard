@@ -1,20 +1,40 @@
 import React from 'react'
 import Nav from '../../components/navbar/nav.jsx'
 import CradCount from '../../components/cardCount/cardCount.jsx';
+import Database from '../../components/database/database.jsx';
 import { BarChart, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Bar, Pie, PieChart, Cell } from 'recharts';
-
 import './home.css';
+import Table from '../../components/table/table.jsx';
+import Parent from '../../components/parent/parent.jsx';
+import StudentCard from '../../components/student/student.jsx';
+import { useSelector, useDispatch } from "react-redux/es/exports.js";
 
 
 
-const Home = ({ teachers, students, courses }) => {
+
+const Home = () => {
     const circleData = [
         { name: 'Activated', value: 75 },
         { name: 'Not Activated', value: 25 },
     ];
     const COLORS = ['rgb(136, 132, 216)', '#CCCCCC'];
 
+    const courses = useSelector((state) => {
+        return state.Courses;
+    })
 
+
+    const teachers = useSelector((state) => {
+        return state.Teachers;
+    })
+
+    const students = useSelector((state) => {
+        return state.Students;
+    })
+
+    const rooms = useSelector((state) => {
+        return state.Rooms;
+    })
 
 
 
@@ -29,14 +49,10 @@ const Home = ({ teachers, students, courses }) => {
             <Nav />
 
             <div className="cards">
-                <CradCount icon="fa fa-school" color="color" title="teachers" count="2000" />
-                <CradCount icon="fa fa-users" color="color" title="students" count="2000" />
-                <CradCount icon="fa fa-bars" color="color" title="courses" count="2000" />
-                <CradCount icon="fa fa-person" color="color" title="rooms" count="2000" />
-                <CradCount icon="fa fa-person" color="color" title="rooms" count="2000" />
-                <CradCount icon="fa fa-person" color="color" title="rooms" count="2000" />
-
-
+                <CradCount icon="fa fa-chalkboard-teacher" color="color" title="teachers" count={teachers.length} />
+                <CradCount icon="fa fa-users" color="color" title="students" count={students.length} />
+                <CradCount icon="fa fa-book" color="color" title="courses" count={courses.length} />
+                <CradCount icon="fa fa-hotel" color="color" title="rooms" count={rooms.length} />
             </div>
 
             <div className="carts">
@@ -79,8 +95,15 @@ const Home = ({ teachers, students, courses }) => {
 
                     {/*start table students*/}
                     {/*end table students*/}
+
+
+
                 </div>
             </div>
+
+            <Database />
+
+
 
         </div>
     )
