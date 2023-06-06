@@ -1,0 +1,13 @@
+/* Style the heading */
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+/* Style the paragraph */
+p {
+    font-size: 2rem;
+    color: #666;
+}

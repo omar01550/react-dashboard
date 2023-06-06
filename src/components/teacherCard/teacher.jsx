@@ -1,7 +1,7 @@
 import React from 'react';
 import './teacher.css';
 
-const TeacherCard = ({ name, age, subject, imageUrl }) => {
+const TeacherCard = ({ name, email, teacherCourse, imageUrl }) => {
     return (
         <div className="teacher-card">
             <div className="teacher-info">
@@ -10,8 +10,8 @@ const TeacherCard = ({ name, age, subject, imageUrl }) => {
                 </div>
                 <div className="teacher-details">
                     <h2>{name}</h2>
-                    <p>{age} years old</p>
-                    <p>Teaches: {subject}</p>
+                    <p>Email : {email} </p>
+                    <p>subject: {teacherCourse} </p>
                 </div>
             </div>
             <div className="chat-icon">

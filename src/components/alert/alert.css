@@ -1,0 +1,47 @@
+.alert {
+    position: fixed;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    left: 50%;
+    top: 10%;
+    width: 50%;
+    transform: translateX(-50%);
+    z-index: 1000000;
+}
+
+.alert.success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert.warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.alert.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert span {
+    display: inline-block;
+    margin-right: 0.5rem;
+}
+
+.alert button {
+    position: absolute;
+    right: 10px;
+    top: -20%;
+    padding: 0.5rem;
+    border: 0;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+
+}

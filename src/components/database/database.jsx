@@ -1,6 +1,6 @@
 import React from 'react'
 import './database.css';
-import { useNavigate } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import { NavLink, Routes, Route } from 'react-router-dom';
 import Container from '../container/container.jsx';
 import StudentCard from '../student/student.jsx';
@@ -36,13 +36,13 @@ const Database = () => {
                 <ul>
                     <li >
 
-                        <NavLink to="/">Students</NavLink>
+                        <NavLink to="">Students</NavLink>
 
                     </li>
 
                     <li>
 
-                        <NavLink exact to="/courses">courses</NavLink>
+                        <NavLink to="/courses">courses</NavLink>
                     </li>
 
 
@@ -58,12 +58,11 @@ const Database = () => {
             </div>
 
 
-            <Routes>
-                <Route path="/" element={<Students data={students} />} />
-                <Route path="teachers" element={<Teachers data={teachers} />} />
-                <Route path="courses" element={<Courses data={courses} />} />
-            </Routes>
 
+
+
+
+            <Outlet />
 
         </div>
     )

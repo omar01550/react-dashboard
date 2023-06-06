@@ -1,7 +1,7 @@
 import React from 'react';
 import './student.css';
 
-const StudentCard = ({ name, semester, age, rate, image }) => {
+const StudentCard = ({ name, email, level, image }) => {
     return (
         <div className="student-card">
             <div className="student-avatar">
@@ -9,15 +9,16 @@ const StudentCard = ({ name, semester, age, rate, image }) => {
             </div>
             <div className="student-details">
                 <h2>{name}</h2>
-                <p>Semester: {semester}</p>
-                <p>Age: {age}</p>
+                <p>Email: {email}</p>
+                <p>Level: {level}</p>
+
                 <div className="student-rating">
-                    <span>{rate}</span>
+
                     <div className="stars">
                         {[...Array(5)].map((_, index) => (
                             <i
                                 key={index}
-                                className={`${index < Math.round(rate) ? 'fas' : 'far'
+                                className={`${index < Math.round(5) ? 'fas' : 'far'
                                     } fa-star`}
                             ></i>
                         ))}

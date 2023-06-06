@@ -1,155 +1,78 @@
 const initCourses = [
+    {
+        courseName: " js ",
+        courseDescription: " mastering js ",
+        courseInstructor: "hassan",
+        courseLevel: 1,
+        courseId: 109090,
+        "courseStudents": Math.floor(Math.random() * 10000)
 
-    { course: 'Math', students: 130 },
-    { course: 'Science', students: 245 },
-    { course: 'English', students: 240 },
-    { course: 'History', students: 145 },
-    { course: 'Art', students: 104 },
+
+    }
+    ,
+    {
+        courseName: " oop",
+        courseDescription: " mastering oop ",
+        courseInstructor: "hassan",
+        courseLevel: 1,
+        courseId: 1090564590,
+        "courseStudents": Math.floor(Math.random() * 10000)
+
+
+
+    },
+    {
+        courseName: " data structure",
+        courseDescription: " mastering data structure ",
+        courseInstructor: "hassan",
+        courseLevel: 1,
+        courseId: 1090564590,
+        "courseStudents": Math.floor(Math.random() * 10000)
+
+
+
+    }
 
 
 ];
-const initTeachers = [{
-    name: "adel",
-    age: 35,
-    id: 20,
-    courses: ["arabic", "english"]
+const initTeachers = [
+    {
+        name: "ahmed",
+        email: "Omar@omar.omar",
+        teacherPassword: "948508390454",
+        teacherCourse: "934859489"
 
-},
-{
-    name: "ahmed",
-    age: 35,
-    id: 20,
-    courses: ["arabic", "english"]
+    },
+    {
+        name: "ali",
+        email: "Omar@omar.omar",
+        teacherPassword: "948508390454",
+        teacherCourse: "934859489"
 
-},
-{
-    name: "ali",
-    age: 35,
-    id: 20,
-    courses: ["arabic", "english"]
+    },
+    {
+        name: "hossam",
+        email: "Omar@omar.omar",
+        teacherPassword: "948508390454",
+        teacherCourse: "934859489"
 
-},
-
-{
-    name: "ali",
-    age: 35,
-    id: 20,
-    courses: ["arabic", "english"]
-
-},
-
-{
-    name: "ali",
-    age: 35,
-    id: 20,
-    courses: ["arabic", "english"]
-
-},
-
-{
-    name: "ali",
-    age: 35,
-    id: 20,
-    courses: ["arabic", "english"]
-
-},
-
-{
-    name: "ali",
-    age: 35,
-    id: 20,
-    courses: ["arabic", "english"]
-
-},
-
-{
-    name: "ali",
-    age: 35,
-    id: 20,
-    courses: ["arabic", "english"]
-
-},
-
-{
-    name: "ali",
-    age: 35,
-    id: 20,
-    courses: ["arabic", "english"]
-
-},
-{
-    name: "ali",
-    age: 35,
-    id: 20,
-    courses: ["arabic", "english"]
-
-},
-
-{
-    name: "ali",
-    age: 35,
-    id: 20,
-    courses: ["arabic", "english"]
-
-},
-
-{
-    name: "ali",
-    age: 35,
-    id: 20,
-    courses: ["arabic", "english"]
-
-},
-
-{
-    name: "ali",
-    age: 35,
-    id: 20,
-    courses: ["arabic", "english"]
-
-},
-
-{
-    name: "ali",
-    age: 35,
-    id: 20,
-    courses: ["arabic", "english"]
-
-},
-
-{
-    name: "ali",
-    age: 35,
-    id: 20,
-    courses: ["arabic", "english"]
-
-},
-
-{
-    name: "ali",
-    age: 35,
-    id: 20,
-    courses: ["arabic", "english"]
-
-},
-
-{
-    name: "ali",
-    age: 35,
-    id: 20,
-    courses: ["arabic", "english"]
-
-},
-
+    }
 
 ];
 const initStudents = [
 
-    { course: 'Math', students: 130 },
-    { course: 'Science', students: 245 },
-    { course: 'English', students: 240 },
-    { course: 'History', students: 145 },
-    { course: 'Art', students: 104 },
+    {
+        studentName: "alla",
+        studentEmail: "alla13@g,ail.com",
+        password: 10101010,
+        level: 1
+    },
+    {
+        studentName: "hamdy",
+        studentEmail: "hamdy13@g,ail.com",
+        password: 10101010,
+        level: 3
+    }
 
 ];
 const initRooms = [
@@ -199,16 +122,46 @@ const initRooms = [
 
 
 const TeachersReducer = (state = initTeachers, action) => {
-    return state;
+    switch (action.type) {
+        case 'add-Teacher':
+            return [...state, action.payload]
+            break;
+
+        default:
+            return [...state]
+
+    }
 }
 
 const StudentsReducer = (state = initStudents, action) => {
-    return state;
+    switch (action.type) {
+        case "add-student":
+            return [...state, action.payload];
+            break;
+
+        default:
+            return state;
+            break;
+    }
 }
 
 
 const CoursesReducer = (state = initCourses, action) => {
-    return state;
+    switch (action.type) {
+        case 'add-course':
+            return [...state, action.payload]
+            break;
+        case 'remove-course':
+
+            break;
+        case 'update-course':
+
+            break;
+
+        default:
+            return state;
+            break;
+    }
 }
 
 
@@ -216,10 +169,29 @@ const RoomsReducer = (state = initRooms, action) => {
     return state;
 }
 
+const alertReducer = (state = false, action) => {
+    switch (action.type) {
+
+        case "show-alert":
+            return { ...action.payload, visible: true }
+            break;
+
+        case "hidden-alert":
+            return { ...action.payload, visible: false }
+            break;
+
+
+        default:
+            return { mesage: "uiui", type: "error", visible: false };
+            break;
+    }
+}
+
 
 export {
     CoursesReducer,
     TeachersReducer,
     StudentsReducer,
-    RoomsReducer
+    RoomsReducer,
+    alertReducer
 }

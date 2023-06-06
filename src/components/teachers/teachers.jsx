@@ -6,9 +6,9 @@ const Teachers = ({ data }) => {
     return (
         <div className='teachers'>
             {data.map(ele => <TeacherCard
-                name="Omar Medhat"
-                age={35}
-                subject="Mathematics"
+                name={ele.name}
+                email={ele.email}
+                teacherCourse={ele.teacherCourse}
                 imageUrl="https://yt3.ggpht.com/yti/AHyvSCDKsLpDInsCmfMd9hnaJ8Z5558IIa9pjPN_KgfhDg=s88-c-k-c0x00ffffff-no-rj-mo"
             />)}
         </div>

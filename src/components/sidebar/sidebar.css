@@ -31,12 +31,12 @@
 
 }
 
-.slide-bar ul li:hover a {
+.slide-bar ul li:hover h3 {
     color: white;
 
 }
 
-.slide-bar ul li a {
+.slide-bar ul li h3 {
     color: gray;
     text-transform: capitalize;
     width: 60%;

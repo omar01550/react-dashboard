@@ -1,28 +1,67 @@
 import React, { useState } from 'react';
 import './new.css';
+import { useDispatch } from 'react-redux';
 
 const AwesomeForm = () => {
-    const [username, setUsername] = useState('');
+    const [studentName, setStudentName] = useState('');
+    const [studentEmail, setStudentEmail] = useState("")
     const [password, setPassword] = useState('');
-    const [semester, setSemester] = useState('');
-    const [age, setAge] = useState('');
+    const [level, setLevel] = useState('');
+    const dispatch = useDispatch('')
 
     const handleSubmit = e => {
         e.preventDefault();
-        console.log('Submitted:', { username, password, semester, age });
+        dispatch({
+            type: "add-student",
+            payload: {
+                studentName: studentName,
+                studentEmail: studentEmail,
+                password: password,
+                level: level
+            }
+
+        })
+
+        dispatch({
+            type: "show-alert",
+            payload: {
+                message: "student added", type: "success"
+            }
+        })
+
+        setTimeout(() => {
+            dispatch({
+                type: "hidden-alert",
+                payload: {
+                    message: "student added", type: "success"
+                }
+            })
+        }, 2000);
+
     };
 
     return (
         <form className="awesome-form" onSubmit={handleSubmit}>
-            <h2>add new student</h2>
+            <h2>Add New Student</h2>
 
             <div className="form-field">
-                <label htmlFor="username">Username:</label>
+                <label htmlFor="studentname">student Name:</label>
                 <input
                     type="text"
-                    id="studentName"
-                    value={username}
-                    onChange={e => setUsername(e.target.value)}
+                    id="studentname"
+                    value={studentName}
+                    onChange={e => setStudentName(e.target.value)}
+                    required
+                />
+            </div>
+
+            <div className="form-field">
+                <label htmlFor="studentemail">student Email:</label>
+                <input
+                    type="email"
+                    id="studentemail"
+                    value={studentEmail}
+                    onChange={e => setStudentEmail(e.target.value)}
                     required
                 />
             </div>
@@ -39,27 +78,20 @@ const AwesomeForm = () => {
             </div>
 
             <div className="form-field">
-                <label htmlFor="semester">Semester:</label>
-                <input
-                    type="text"
-                    id="semester"
-                    value={semester}
-                    onChange={e => setSemester(e.target.value)}
-                    required
-                />
+                <label htmlFor="semester">level:</label>
+                <select name="level" id="student Level" value={level} onChange={e => setLevel(e.target.value)}>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+
+
+
+                </select>
+
             </div>
 
-            <div className="form-field">
-                <label htmlFor="age">Age:</label>
-                <input
-                    type="number"
-                    id="age"
-                    value={age}
-                    max="170"
-                    onChange={e => setAge(e.target.value)}
-                    required
-                />
-            </div>
+
 
             <button type="submit">Create account</button>
         </form>
