@@ -1,6 +1,6 @@
 {
   "name": "learn_webpack",
-  "homepage": "https://your-username.github.io/react-dashboard",
+  "homepage": "https://your-username.github.io/react-dashboard/",
   "version": "1.0.0",
   "description": "",
   "main": "./src/index.js",
